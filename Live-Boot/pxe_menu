@@ -1,0 +1,9 @@
+##NO-TOCAR-ESTA-LINEA ogLive
+default saved
+timeout 1
+hiddenmenu
+fallback 1 2 3 4
+
+title Netboot via HTTP
+kernel (pd)/debian/vmlinuz ro boot=live irqpoll acpi=on vga=788 fetch=http://192.168.56.10:80/netboot/filesystem.squashfs
+initrd (pd)/debian/initrd.img

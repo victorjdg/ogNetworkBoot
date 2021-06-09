@@ -1,0 +1,1 @@
+debootstrap subversion schroot syslinux genisoimage ipxe qemu qemu-utils

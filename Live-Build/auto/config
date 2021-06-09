@@ -1,0 +1,13 @@
+#!/bin/bash
+lb config noauto \
+	--binary-images netboot \
+	--net-root-path "/srv/debian-live" \
+	--net-root-server "192.168.0.2" \
+	--archive-areas "main contrib" \
+	--mirror-bootstrap http://localhost/debian/ \
+	--mirror-chroot-security http:://localhost/debian-security \
+	--chroot-filesystem squashfs \
+	--linux-flavours amd64 \
+	--apt-options "--force-yes --yes" \
+	--bootappend-live "boot=live components locales=es_ES.UTF-8 keyboard-layout=es" \
+	"${@}"
